@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 <body>
     <form>  
-        <h1 style="color: red;">Employee Registration Form</h1>  
-        <table>
+        <h1 class="text-red-500 text-3xl font-bold">Employee Registration Form</h1>  
+        <table class="mt-3">
             <tr>
-                <td>Gender</td>
+                <td></td>
                 <td>
                     <input type="radio" id="gender" name="gender" value="male"/ checked> Mr.      
                     <input type="radio" id="gender" name="gender" value="female"/> Mrs. 
@@ -98,12 +98,12 @@
         <td>Additional information</td>
         <td><textarea placeholder="optional"></textarea></td>
     </tr>
-        </table>
+        
        <tr>
         <td></td>
         <td><button type="submit" form="nameform" value="Submit">Submit</button> &nbsp;<button type="reset" form="nameform" value="reset">Reset</button></td>
        </tr>
-  
+    </table>
         </form>    
    
 
