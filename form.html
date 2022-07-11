@@ -101,10 +101,10 @@
                         <tr>
 
                             <td>
-                                <label for="mb" class="after:content-['*'] after:text-red-400">Mobile:</label>
+                                <label for="mob" class="after:content-['*'] after:text-red-400">Mobile:</label>
                             </td>
                             <td>
-                                <input type="text" id="mb" name="mb" placeholder="+91"></td>
+                                <input type="text" id="mob" name="mb" placeholder="+91"></td>
                         </tr>
                         <tr>
 
@@ -136,7 +136,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <button class="p-2 m-2 bg-gray-300 border-solid border-2 border-indigo-600 rounded-lg" type="submit" form="nameform" value="Submit" >Submit</button>
+                                <button class="p-2 m-2 bg-gray-300 border-solid border-2 border-indigo-600 rounded-lg" type="submit" onclick="submitFormValues()" form="nameform" value="Submit">Submit</button>
                                 &nbsp;<button class="p-2 m-2 bg-gray-300 border-solid border-2 border-indigo-600 rounded-lg" type="reset" form="nameform" value="reset">Reset</button>
                             </td>
                         </tr>
@@ -145,9 +145,10 @@
             </div>
             <div class="bg-gray-300 col-span-2">
                 <h1 class="text-red-500 text-2xl  text-center mt-4 font-bold">Employee List</h1>
-                <table class="border-separate bg-white border-spacing-2 border border-slate-400 m-20">
+                <table class="border-separate bg-white border-spacing-2 border border-slate-400 m-20" id="tableId" >
                     <thead>
                     <tr>
+                        <th class="border border-slate-300">Sr.no</th>
                         <th class="border border-slate-300">FirstName</th>
                         <th class="border border-slate-300">LastName</th>
                         <th class="border border-slate-300">State</th>
@@ -159,6 +160,7 @@
                 </thead>
                 <tbody>
                     <tr>
+                        <td class="border border-slate-300">1</td>
                         <td class="border border-slate-300">Amita</td>
                         <td class="border border-slate-300">Kale</td>
                         <td class="border border-slate-300">Maharashtra</td>
@@ -171,12 +173,55 @@
                 </table>
             </div>
         </div>
-<!-- <script>
-  function submitValue()
+
+         <script>
+  function submitFormValues()
     {
-        console.log("hello submit click");
+       
+        var table = document.getElementById("tableId");
+        var tr=document.createElement('tr');
+
+        var td=document.createElement('td');
+        let srno=document.createTextNode("2");
+        td.append(srno);
+        tr.append(td);
+        td.setAttribute("class","border border-slate-300");
+
+        var td=document.createElement('td');
+        let fn=document.getElementById("fname").value;
+        td.append(fn);
+        tr.append(td);
+        td.setAttribute("class","border border-slate-300");
+        // table.append(tr);
+
+        var td=document.createElement('td');
+        let ln=document.getElementById("lname").value;
+        td.append(ln);
+        tr.append(td);
+        td.setAttribute("class","border border-slate-300");
+    
+        var td=document.createElement('td');
+        let state=document.getElementById("state").value;
+        td.append(state);
+        tr.append(td);
+        td.setAttribute("class","border border-slate-300");
+    
+        var td=document.createElement('td');
+        let email=document.getElementById("email").value;
+        td.append(email);
+        tr.append(td);
+        td.setAttribute("class","border border-slate-300");
         
-    }
-</script> -->
+        
+        var td=document.createElement('td');
+        let mob=document.getElementById("mob").value;
+        td.append(mob);
+        tr.append(td);
+        table.append(tr);
+        td.setAttribute("class","border border-slate-300");
+       
+        
+}
+</script> 
     </body>
 </html>
