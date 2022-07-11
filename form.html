@@ -211,14 +211,31 @@
         td.append(email);
         tr.append(td);
         td.setAttribute("class","border border-slate-300");
-        
-        
+       
         var td=document.createElement('td');
         let mob=document.getElementById("mob").value;
         td.append(mob);
         tr.append(td);
-        table.append(tr);
         td.setAttribute("class","border border-slate-300");
+
+        var td=document.createElement('td');
+        var button=document.createElement('button');
+        let editbutton=document.createTextNode("Edit");
+        button.append(editbutton);
+        button.setAttribute("class","p-2 bg-fuchsia-600 rounded-lg");
+        td.append(button);
+        tr.append(td);
+       
+        var td=document.createElement('td');
+        var button=document.createElement('button');
+        let deletebutton=document.createTextNode("Delete");
+        button.append(deletebutton);
+        button.setAttribute("class","p-2 bg-fuchsia-600 rounded-lg");
+        td.append(button);
+        tr.append(td);
+
+        table.append(tr);
+       
        
         
 }
