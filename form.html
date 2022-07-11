@@ -97,7 +97,7 @@
                             
                             </td>
                             <td>
-                                <input type="email" id="email" name="email">
+                                <input type="text" id="email" name="email">
                             </td>
                             
                         </tr>
@@ -178,70 +178,67 @@
         </div>
 
          <script>
-  function submitFormValues()
-    {
-       
-        var table = document.getElementById("tableId");
-        var tr=document.createElement('tr');
+            function submitFormValues()
+                {
+                 
+                    var table = document.getElementById("tableId");
+                    var tr=document.createElement('tr');
 
-        var td=document.createElement('td');
-        let srno=document.createTextNode("2");
-        td.append(srno);
-        tr.append(td);
-        td.setAttribute("class","border border-slate-300");
+                    var td=document.createElement('td');
+                    let srno=document.createTextNode("2");
+                    td.append(srno);
+                    tr.append(td);
+                    td.setAttribute("class","border border-slate-300");
 
-        var td=document.createElement('td');
-        let fn=document.getElementById("fname").value;
-        td.append(fn);
-        tr.append(td);
-        td.setAttribute("class","border border-slate-300");
-        // table.append(tr);
+                    var td=document.createElement('td');
+                    let fn=document.getElementById("fname").value;
+                    td.append(fn);
+                    tr.append(td);
+                    td.setAttribute("class","border border-slate-300");
+                    // table.append(tr);
 
-        var td=document.createElement('td');
-        let ln=document.getElementById("lname").value;
-        td.append(ln);
-        tr.append(td);
-        td.setAttribute("class","border border-slate-300");
-    
-        var td=document.createElement('td');
-        let state=document.getElementById("state").value;
-        td.append(state);
-        tr.append(td);
-        td.setAttribute("class","border border-slate-300");
-    
-        var td=document.createElement('td');
-        let email=document.getElementById("email").value;
-        td.append(email);
-        tr.append(td);
-        td.setAttribute("class","border border-slate-300");
-       
-        var td=document.createElement('td');
-        let mob=document.getElementById("mob").value;
-        td.append(mob);
-        tr.append(td);
-        td.setAttribute("class","border border-slate-300");
+                    var td=document.createElement('td');
+                    let ln=document.getElementById("lname").value;
+                    td.append(ln);
+                    tr.append(td);
+                    td.setAttribute("class","border border-slate-300");
+                
+                    var td=document.createElement('td');
+                    let state=document.getElementById("state").value;
+                    td.append(state);
+                    tr.append(td);
+                    td.setAttribute("class","border border-slate-300");
+                
+                    var td=document.createElement('td');
+                    let email=document.getElementById("email").value;
+                    td.append(email);
+                    tr.append(td);
+                    td.setAttribute("class","border border-slate-300");
+                
+                    var td=document.createElement('td');
+                    let mob=document.getElementById("mob").value;
+                    td.append(mob);
+                    tr.append(td);
+                    td.setAttribute("class","border border-slate-300");
 
-        var td=document.createElement('td');
-        var button=document.createElement('button');
-        let editbutton=document.createTextNode("Edit");
-        button.append(editbutton);
-        button.setAttribute("class","p-2 bg-fuchsia-600 rounded-lg");
-        td.append(button);
-        tr.append(td);
-       
-        var td=document.createElement('td');
-        var button=document.createElement('button');
-        let deletebutton=document.createTextNode("Delete");
-        button.append(deletebutton);
-        button.setAttribute("class","p-2 bg-fuchsia-600 rounded-lg");
-        td.append(button);
-        tr.append(td);
+                    var td=document.createElement('td');
+                    var button=document.createElement('button');
+                    let editbutton=document.createTextNode("Edit");
+                    button.append(editbutton);
+                    button.setAttribute("class","p-2 bg-fuchsia-600 rounded-lg");
+                    td.append(button);
+                    tr.append(td);
+                
+                    var td=document.createElement('td');
+                    var button=document.createElement('button');
+                    let deletebutton=document.createTextNode("Delete");
+                    button.append(deletebutton);
+                    button.setAttribute("class","p-2 bg-fuchsia-600 rounded-lg");
+                    td.append(button);
+                    tr.append(td);
 
-        table.append(tr);
-       
-       
-        
-}
+                    table.append(tr);
+                }
 </script> 
     </body>
 </html>
